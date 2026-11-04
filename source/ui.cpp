@@ -170,7 +170,7 @@ void render(u16 *top, u16 *bottom, const u8 *font,
   t.rect(0, 0, 400, 34, panel);
   t.rect(16, 12, 7, 10, cyan);
   t.text(32, 13, "SaveRelay", white);
-  t.text(328, 13, "0.4.1", muted);
+  t.text(328, 13, "1.0.1", muted);
   t.text(18, 48, "SPIELSTAND UEBERTRAGEN", muted);
   if (list.empty()) {
     t.text(18, 83, "Keine erreichbaren 3DS-Saves.", white);
@@ -266,7 +266,7 @@ void renderOperation(u16 *top, u16 *bottom, const u8 *font,
   t.rect(0, 0, 400, 34, panel);
   t.rect(16, 12, 7, 10, accent);
   t.text(32, 13, "SaveRelay", white);
-  t.text(328, 13, "0.4.1", muted);
+  t.text(328, 13, "1.0.1", muted);
   t.rect(16, 47, 368, 58, panel);
   if (op.game) {
     t.image(21, 52, *op.game);
