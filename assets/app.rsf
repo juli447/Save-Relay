@@ -28,7 +28,8 @@ AccessControlInfo:
   SystemMode: 64MB
   IdealProcessor: 0
   AffinityMask: 1
-  Priority: 48
+  # makerom adds 32 for applications: 16 becomes kernel priority 48 (0x30).
+  Priority: 16
   MaxCpu: 0x9E
   HandleTableSize: 0x200
   DisableDebug: false

@@ -18,7 +18,7 @@ CXXFLAGS := $(ARCH) -O2 -g -Wall -Wextra -Wno-psabi -mword-relocations -ffunctio
 LDFLAGS := $(ARCH) -specs=3dsx.specs -Wl,-Map,$(BUILD)/SaveRelay.map
 SOURCES := $(wildcard source/*.cpp)
 OBJECTS := $(patsubst source/%.cpp,$(BUILD)/%.o,$(SOURCES))
-VERSION_CODE := 1
+VERSION_CODE := 2
 
 .PHONY: all 3dsx cia clean test
 all: 3dsx cia
