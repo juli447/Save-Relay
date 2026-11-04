@@ -59,19 +59,6 @@ Ergebnisse: `SaveRelay.cia`, `SaveRelay.3dsx`, `SaveRelay.smdh`. Nur Homebrew La
 
 Die Quell-PNGs und die stille Banner-WAV liegen unter `assets/`. `python3 scripts/generate_assets.py` erzeugt diese eigenen Grafiken erneut. Es werden keine Spiele-Icons oder Nintendo-Grafiken mitgeliefert; Spiel-Icons werden auf der Konsole aus den Metadaten gelesen.
 
-## Auf GitHub verwenden
-
-Den Inhalt dieses Projektordners in ein eigenes Repository hochladen. `.github/workflows/build.yml` führt Tests und den Cross-Build aus und stellt CIA/3DSX als Actions-Artefakt bereit. Der Workflow ist enthalten, wurde aber nicht auf deinem GitHub-Konto ausgeführt.
-
-Beim Upload über Git unbedingt die Verzeichnisse `.github/`, `assets/`, `include/`, `source/`, `scripts/` und `tests/` mitnehmen. Die Fixture `tests/fixtures/icon.smdh` ist ausdrücklich von der Ignore-Regel ausgenommen. Compiler und heruntergeladene Werkzeuge nicht ins Repository übernehmen.
-
-```bash
-git init
-git add .
-git commit -m "Initial SaveRelay 0.4.1 source and CIA build"
-# Anschließend dein eigenes GitHub-Repository als origin eintragen und pushen.
-```
-
 ## Tests und CIA-Metadaten
 
 ```bash
@@ -80,14 +67,12 @@ bash tests/run.sh
 ASAN_OPTIONS=detect_leaks=0 bash tests/run.sh
 ```
 
-Host-Tests prüfen Archivvalidierung, Backups, Restore/Read-back/Rollback, wiederholte Recovery-Verweise, Icon-Decodierung, Navigation und das Double-Buffer-Presenting. Sie ersetzen keinen Test auf echter 3DS-Hardware.
+Tests prüfen Archivvalidierung, Backups, Restore/Read-back/Rollback, wiederholte Recovery-Verweise, Icon-Decodierung, Navigation und das Double-Buffer-Presenting.
 
-CIA Title-ID: **`000400000F7A1200`**, Product Code: `CTR-HB-SVRL`, Installations-Version: 1. Die sichtbare App-Version bleibt 0.4.1. Diese eigene Homebrew-ID ist keine registrierte Nintendo-ID; bei einem eigenen Fork bei Bedarf bewusst ändern. Die App filtert sich selbst aus der Spieleauswahl.
+CIA Title-ID: **`000400000F7A1200`**, Product Code: `CTR-HB-SVRL`, die App filtert sich selbst aus der Spieleauswahl.
 
-Die CIA benötigt `fs:USER`, AM, UDS und die üblichen Grafik-/Eingabedienste. Die RSF aktiviert Dateisystem-Werkzeugrechte für fremde Benutzer-Saves; im Programm werden nur normale 3DS-Anwendungstitel auf SD/Spielkarte geöffnet.
-
-Die ausgelieferte CIA wurde mit ctrtool strukturell und anhand ihrer Inhaltshashes geprüft. Nintendo-Signaturprüfungen für Ticket/TMD/AccessDescriptor schlagen bei dieser Homebrew-Testsignierung erwartungsgemäß fehl; Luma3DS/CFW ist Voraussetzung. **Noch kein Hardwaretest der CIA-Ausgabe.**
+Die CIA benötigt `fs:USER`, AM, UDS und die üblichen Grafik-/Eingabedienste. Die RSF aktiviert Dateisystem-Werkzeugrechte für fremde Benutzer-Saves; es werden nur normale 3DS-Anwendungstitel auf SD/Spielkarte geöffnet.
 
 ## Lizenz und Herkunft
 
-Eigener SaveRelay-Code und eigene Assets: MIT, siehe [LICENSE](LICENSE). Dritte Komponenten und Werkzeuge: [THIRD_PARTY.md](THIRD_PARTY.md). SaveRelay ist eine eigenständige App und keine offizielle Checkpoint-Version.
+Eigener SaveRelay-Code und eigene Assets: MIT, siehe [LICENSE](LICENSE). Dritte Komponenten und Werkzeuge: [THIRD_PARTY.md](THIRD_PARTY.md).
