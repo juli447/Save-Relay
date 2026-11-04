@@ -1,0 +1,37 @@
+name: Build and test
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Host tests (ASan and UBSan)
+        run: bash tests/run.sh
+  build:
+    runs-on: ubuntu-24.04
+    container:
+      image: devkitpro/devkitarm@sha256:116afba8df8453961de2936ffab20dd441edf4d682856c1ec8b0e53d7ed0bbf5
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - name: Install packaging tools locally
+        shell: bash
+        run: bash scripts/bootstrap-tools.sh
+      - name: Build 3DSX and CIA
+        shell: bash
+        run: |
+          export PATH="$PWD/.tools/bin:$PATH"
+          make -j2
+      - uses: actions/upload-artifact@v7.0.2
+        with:
+          name: SaveRelay-0.4.1
+          path: |
+            SaveRelay.cia
+            SaveRelay.3dsx
+            SaveRelay.smdh
+          if-no-files-found: error
+          retention-days: 30

@@ -1,0 +1,113 @@
+BasicInfo:
+  Title: SaveRelay
+  ProductCode: CTR-HB-SVRL
+  Logo: Homebrew
+TitleInfo:
+  Category: Application
+  UniqueId: 0xF7A12
+Option:
+  UseOnSD: true
+  FreeProductCode: true
+  MediaFootPadding: false
+  EnableCrypt: false
+  EnableCompress: true
+AccessControlInfo:
+  CoreVersion: 2
+  DescVersion: 2
+  ReleaseKernelMajor: "02"
+  ReleaseKernelMinor: "46"
+  UseExtSaveData: false
+  FileSystemAccess:
+    - CategorySystemApplication
+    - CategoryFileSystemTool
+    - Debug
+    - DirectSdmc
+    - DirectSdmcWrite
+    - SaveDataMove
+  MemoryType: Application
+  SystemMode: 64MB
+  IdealProcessor: 0
+  AffinityMask: 1
+  Priority: 48
+  MaxCpu: 0x9E
+  HandleTableSize: 0x200
+  DisableDebug: false
+  EnableForceDebug: false
+  CanWriteSharedPage: true
+  CanUsePrivilegedPriority: false
+  CanUseNonAlphabetAndNumber: true
+  PermitMainFunctionArgument: true
+  CanShareDeviceMemory: true
+  RunnableOnSleep: false
+  SpecialMemoryArrange: false
+  SystemModeExt: Legacy
+  CpuSpeed: 268MHz
+  EnableL2Cache: false
+  CanAccessCore2: false
+  MemoryMapping:
+    - 1f000000-1f5fffff:r
+  SystemCallAccess:
+    ControlMemory: 1
+    QueryMemory: 2
+    ExitProcess: 3
+    CreateThread: 8
+    ExitThread: 9
+    SleepThread: 10
+    GetThreadPriority: 11
+    SetThreadPriority: 12
+    GetCurrentProcessorNumber: 17
+    CreateMutex: 19
+    ReleaseMutex: 20
+    CreateSemaphore: 21
+    ReleaseSemaphore: 22
+    CreateEvent: 23
+    SignalEvent: 24
+    ClearEvent: 25
+    CreateTimer: 26
+    SetTimer: 27
+    CancelTimer: 28
+    ClearTimer: 29
+    CreateMemoryBlock: 30
+    MapMemoryBlock: 31
+    UnmapMemoryBlock: 32
+    CreateAddressArbiter: 33
+    ArbitrateAddress: 34
+    CloseHandle: 35
+    WaitSynchronization1: 36
+    WaitSynchronizationN: 37
+    DuplicateHandle: 39
+    GetSystemTick: 40
+    GetHandleInfo: 41
+    GetSystemInfo: 42
+    GetProcessInfo: 43
+    ConnectToPort: 45
+    SendSyncRequest: 50
+    GetProcessId: 53
+    GetThreadId: 55
+    Break: 60
+    OutputDebugString: 61
+  ServiceAccessControl:
+    - APT:U
+    - ac:u
+    - am:net
+    - cfg:u
+    - fs:USER
+    - gsp::Gpu
+    - gsp::Lcd
+    - hid:USER
+    - ndm:u
+    - nwm::UDS
+    - ptm:u
+SystemControlInfo:
+  SaveDataSize: 0KB
+  RemasterVersion: 1
+  StackSize: 0x40000
+  Dependency:
+    ac: 0x0004013000002402
+    am: 0x0004013000001502
+    cfg: 0x0004013000001702
+    gsp: 0x0004013000001c02
+    hid: 0x0004013000001d02
+    ndm: 0x0004013000002b02
+    nwm: 0x0004013000002d02
+    ptm: 0x0004013000002202

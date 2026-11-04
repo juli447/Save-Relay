@@ -1,0 +1,4 @@
+PASS: CRC, valid archives, Unicode, empty files, every single-byte corruption and truncation, title mismatch, traversal, duplicates, parent types, oversized files and entry limits
+PASS: snapshot, automatic restore, read-back, recovery, injected write failure with rollback, repeated reception without rename-overwrite, pointer publication failure, interrupted rotation recovery, corrupted input causes no save writes; host filesystem mock only
+PASS: icon decoding, grid/touch navigation, transfer progress including unknown/zero size, all operation screens, peer pagination, confirmation and cancel targets
+PASS: RGB565 double buffering, render only to hidden buffers, flush/swap/VBlank ordering, rapid transitions, animated transfers and stable completion/error/peer screens

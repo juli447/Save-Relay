@@ -1,0 +1,14 @@
+/build/
+/.tools/
+/dist/
+*.elf
+*.cia
+*.3dsx
+*.smdh
+*.cxi
+*.map
+*.lst
+*.o
+*.d
+__pycache__/
+!tests/fixtures/*.smdh
