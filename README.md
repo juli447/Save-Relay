@@ -5,9 +5,9 @@ Lokaler Save Transfer zwischen 2 3DS Systemen
 ## Download und Installation
 
 - **CIA:** `SaveRelay.cia` mit FBI installieren und anschließend im HOME-Menü starten.
-- **3DSX:** `SaveRelay.3dsx` nach `/3ds/SaveRelay/SaveRelay.3dsx` kopieren und im Rosalina Homebrew Launcher starten. `SaveRelay.smdh` kann daneben liegen.
+- **3DSX:** `SaveRelay.3dsx` nach `/3ds/SaveRelay/SaveRelay.3dsx` kopieren und im Homebrew Launcher starten.
 - Lokale Kommunikation auf beiden Konsolen einschalten.
-- Das Zielspiel muss installiert bzw. als Spielkarte eingelegt sein und einen initialisierten Spielstand besitzen. Vorher Spiel schließen.
+- Das Zielspiel muss installiert bzw. als Spielkarte eingelegt sein und einen initialisierten Spielstand besitzen.
 
 ## Bedienung
 
@@ -75,4 +75,4 @@ Die CIA benötigt `fs:USER`, AM, UDS und die üblichen Grafik-/Eingabedienste. D
 
 ## Lizenz und Herkunft
 
-Eigener SaveRelay-Code und eigene Assets: MIT, siehe [LICENSE](LICENSE). Dritte Komponenten und Werkzeuge: [THIRD_PARTY.md](THIRD_PARTY.md).
+Eigener SaveRelay-Code und eigene Assets: GPL-3.0-or-later, siehe [LICENSE](LICENSE). Dritte Komponenten und Werkzeuge: [THIRD_PARTY.md](THIRD_PARTY.md).

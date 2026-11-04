@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# SPDX-License-Identifier: GPL-3.0-or-later
 """Create the original SaveRelay icon/banner and a silent banner sound. Stdlib only."""
 from pathlib import Path
 import struct

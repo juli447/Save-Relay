@@ -1,3 +1,4 @@
+# SPDX-License-Identifier: GPL-3.0-or-later
 .DEFAULT_GOAL := all
 ifeq ($(strip $(DEVKITARM)),)
 $(error Set DEVKITARM to your devkitPro/devkitARM directory)
